@@ -1,0 +1,246 @@
+.container {
+  padding: 30px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #0f766e;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.savedBadge {
+  background: #111827;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  margin-left: 20px;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #14b8a6;
+}
+
+/* Timeline Item */
+.timelineItem {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+/* Icon Circle */
+.iconCircle {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 2px solid #14b8a6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  color: #0f766e;
+}
+
+/* Content Box */
+.content {
+  background: #f9fafb;
+  padding: 18px;
+  border-radius: 8px;
+  margin-left: 20px;
+  flex: 1;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  font-size: 13px;
+  color: #0f766e;
+  font-weight: 500;
+}
+
+.content p {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* MODAL OVERLAY */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* MODAL BOX */
+.modal {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* HEADER */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* INPUTS */
+.modal input,
+.modal textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal textarea {
+  min-height: 80px;
+}
+
+/* ICON OPTIONS */
+.iconOptions {
+  display: flex;
+  gap: 8px;
+}
+
+.iconBtn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.activeIcon {
+  background: #0f766e;
+  color: white;
+  border-color: #0f766e;
+}
+
+/* ACTION BUTTONS */
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cancelBtn {
+  background: #eee;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn {
+  background: #0f766e;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ------------------- Timeline Card Delete Button ------------------- */
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  gap: 6px;
+  background-color: #004d40; /* dark teal */
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  margin-top: 8px; /* space from description */
+  justify-content: flex-start; /* align to left */
+}
+
+.deleteBtn:hover {
+  background-color: #00695c; /* slightly lighter teal on hover */
+  transform: scale(1.05);
+}
+
+.deleteBtn:active {
+  background-color: #00332c; /* darker teal when clicked */
+}
+
+.deleteBtn svg {
+  stroke: #ffffff; /* make icon white */
+  width: 16px;
+  height: 16px;
+}
